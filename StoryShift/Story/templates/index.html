@@ -5,4 +5,21 @@
 
 <h1>Hello {{ temporaryData }} </h1>
 
+<h2>Dynamic content</h2>
+
+<p>The Fandom contains these AU's currently:</p>
+
+
+<form method="POST" action = "ACTION_OR_VIEW_URL_ON_SUBMIT_HERE">{% csrf_token %}
+    <label for="auSelect">Choose an AU! </label>
+    <select type="text" id="auSelect" name="auSelect">
+        <option selected>ErrorTale</option>
+        <option>StoryShift</option>
+        <option>AltTale</option>
+        <option>InkTale</option>
+        <option>UnderSwap</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit!"/>
+
 {% endblock %}
