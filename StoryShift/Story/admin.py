@@ -10,7 +10,7 @@ class StoryAdmin(admin.ModelAdmin):
 admin.site.register(Story, StoryAdmin)
 
 class LocationAdmin(admin.ModelAdmin):
-    list_display = ('id' , 'name')
+    list_display = ('id' , 'name' , 'story')
 
 admin.site.register(Location, LocationAdmin)
 
