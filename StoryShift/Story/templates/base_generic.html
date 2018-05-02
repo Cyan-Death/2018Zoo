@@ -2,22 +2,37 @@
 <html lang="en">
 <head>
   
-  {% block title %}<title>Welcome to my Zoo</title>{% endblock %}
+  {% block title %}<title>Undertale AU's</title>{% endblock %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
+  
   <!-- Add additional CSS in static file -->
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script src="{% static 'js/Characters.js' %}"></script>
 </head>
 
 <body>
-	
+
+  <div class="Header">
+{% for story in location.story.all %}
+    <ul>
+      <li>
+        <a href="{{ story.get_absolute_url }}">{{ story.name }}</a>
+      </li>
+{% endfor %}
+      <li class="nav"><img src="https://i.ytimg.com/vi/Fgkkk9sdZOg/hqdefault.jpg" height="50px" width="75px"></li>
+      <li class="nav"><p>Contact Us</p></li>
+    </ul>
+  </div>
+  <hr>
+
 	{% block content %}{% endblock %}
-	
+
 </body>
 
 </html>

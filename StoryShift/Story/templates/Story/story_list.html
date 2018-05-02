@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Story list</h1>
+
+{% for story in story_list %}
+<ul>
+    <li>
+        <a href="{{ story.get_absolute_url }}">{{ story.name }}</a>
+    </li>
+</ul>
+
+{% endfor %}
+
+{% endblock %}

@@ -11,17 +11,7 @@
 <h1>Characters</h1>
 
 {% for characters in location.characters_set.all %}
-    <p> {{characters.name}} <button onclick="showModal('{{characters.name}}')">Show Modal</button></p>
-
-<div id="{{characters.name}}" class="modal charactermodal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <p>{{characters.name}}</p>
-  <div id="caption"></div>
-</div>
-
+    <p> {{characters.name}} </p>
 {% endfor %}
 
 {% endblock %}
-
-

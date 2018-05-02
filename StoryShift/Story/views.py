@@ -1,23 +1,20 @@
 from django.shortcuts import render
+from django.views import generic
 
 # Create your views here.
 
-def index(request):
-    temporaryData = "Asriel"
+def aboutus(request):
     return render(
         request,
-	"index.html",
-	context = {'temporaryData':temporaryData,},
+	"zoo/aboutus.html",
+	context = { },
     )
-
-from django.views import generic
 
 
 from .models import Story , Location , Characters
 
 class StoryListView(generic.ListView):
     model = Story
-    paginate_by = 10
 
 class StoryDetailView(generic.DetailView):
     model = Story

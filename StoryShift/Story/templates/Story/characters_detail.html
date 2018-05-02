@@ -6,4 +6,8 @@
 <h1>Character Detail for {{ characters.id }} - {{ characters.name }} in
   {{ characters.location.name }} in {{ characters.location.story.name }}</h1>
 
+<h1>Image!</h1>
+{% load static %}
+<img src="{% static character.imageFileName %}">
+
 {% endblock %}
