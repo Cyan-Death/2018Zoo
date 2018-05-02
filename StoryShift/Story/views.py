@@ -13,8 +13,17 @@ def index(request):
 from django.views import generic
 
 
-from .models import Story
+from .models import Story , Location , Characters
 
 class StoryListView(generic.ListView):
     model = Story
     paginate_by = 10
+
+class StoryDetailView(generic.DetailView):
+    model = Story
+
+class LocationDetailView(generic.DetailView):
+    model = Location
+
+class CharacterDetailView(generic.DetailView):
+    model = Characters

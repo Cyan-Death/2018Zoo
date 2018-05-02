@@ -5,7 +5,7 @@ from django.contrib import admin
 from .models import Story, Location, Characters, LocationNeighbors
 
 class StoryAdmin(admin.ModelAdmin):
-    list_display = ('id' , 'name')
+    list_display = ('id' , 'name' , 'logoFileName')
 
 admin.site.register(Story, StoryAdmin)
 
@@ -15,7 +15,8 @@ class LocationAdmin(admin.ModelAdmin):
 admin.site.register(Location, LocationAdmin)
 
 class CharactersAdmin(admin.ModelAdmin):
-    list_display = ('id' , 'name')
+    list_display = ('id' , 'name' , 'story' , 'imageFileName')
+	# location , get_absolute_url
 
 admin.site.register(Characters, CharactersAdmin)
 

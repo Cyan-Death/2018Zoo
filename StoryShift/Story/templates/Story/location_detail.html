@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Location Detail for {{ location.id }} - {{ location.name }} in {{ location.zoo.name }}</h1>
+
+<h1>Neighbors</h1>
+
+
+<h1>Characters</h1>
+
+{% for characters in location.characters_set.all %}
+    <p> {{characters.name}} </p>
+{% endfor %}
+
+{% endblock %}
