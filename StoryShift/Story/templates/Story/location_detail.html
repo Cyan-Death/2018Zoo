@@ -15,8 +15,11 @@
 
 <div id="{{characters.name}}" class="modal charactermodal">
   <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <p>{{characters.name}}</p>
+  <h1>{{characters.name}}</h1>
+  <img class="modal-content" src="{{characters.imageFileName}}">
+  <br>
+  <h5 id="{{characters.dialougue}}"class="optionClicked" onclick="answer()">{{characters.dialougueOne}}</h5>
+  <h3 id="{{chracters.answer}}" class="hidden">{{characters.answer}}</h3>
   <div id="caption"></div>
 </div>
 

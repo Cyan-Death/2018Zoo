@@ -10,9 +10,21 @@ div, ul {
   list-style-type: none;
 }
 
+.optionClicked:hover{
+  color: green;
+}
+
 #character:hover {
   color: blue;
   opacity: 0.7;
+}
+
+.visable{
+  visibility: visable;
+}
+
+.hidden{
+  visibility: hidden;
 }
 
 .modal {
@@ -31,8 +43,8 @@ div, ul {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%
-  max-widthL 700px;
+  width: 100px;
+  height: 100px;
 }
 
 #caption {

@@ -28,6 +28,10 @@ class Characters(models.Model):
     location = models.ForeignKey('Location', on_delete=models.SET_NULL, null=True)
     story = models.ForeignKey('Story', on_delete=models.SET_NULL, null=True)
     imageFileName = models.CharField(max_length=200, help_text="Enter logo file name", null=True)
+    dialougueOne = models.CharField(max_length=500, help_text="Enter Dialougue", null=True)
+    answerOne = models.CharField(max_length=500, help_text="Enter Answer", null=True)
+    dialougueTwo = models.CharField(max_length=500, help_text="Enter Dialougue", null=True)
+    dialougueThree = models.CharField(max_length=500, help_text="Enter Dialougue", null=True)
 
 class LocationNeighbors(models.Model):
     fromLocation = models.ForeignKey('Location' , on_delete=models.SET_NULL , null=True , related_name='fromLocation')
