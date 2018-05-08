@@ -9,18 +9,20 @@
 {% endfor %}
 
 <h1>Characters</h1>
-
+{% load static %}
 {% for characters in location.characters_set.all %}
     <p> {{characters.name}} <button onclick="showModal('{{characters.name}}')">Show Modal</button></p>
 
 <div id="{{characters.name}}" class="modal charactermodal">
-  <span class="close">&times;</span>
+  <span class="close" onclick="closeModal('{{characters.name}}')">&times;</span>
   <h1>{{characters.name}}</h1>
-  <img class="modal-content" src="{{characters.imageFileName}}">
+  <img class="modal-content" src="{% static characters.imageFileName %}">
   <br>
-  <h5 id="{{characters.dialougue}}"class="optionClicked" onclick="answer()">{{characters.dialougueOne}}</h5>
-  <h3 id="{{chracters.answer}}" class="hidden">{{characters.answer}}</h3>
-  <div id="caption"></div>
+  <h4 id="{{characters.id}}"class="optionClicked" onclick="answer('return{{characters.id}}') , dialougueTwo('questionTwo{{characters.id}}')">{{characters.dialougueOne}}</h4>
+  <h5 id="return{{characters.id}}" class="hidden">{{characters.answerOne}}</h5>
+  <h4 id="questionTwo{{characters.id}}" class="hidden optionClicked" onclick="answerTwo('answerTwo{{characters.id}}')">{{characters.dialougueTwo}}</h4>
+  <h5 id="answerTwo{{characters.id}}" class="hidden">{{characters.answerTwo}}</h5>
+<div id="caption"></div>
 </div>
 
 {% endfor %}

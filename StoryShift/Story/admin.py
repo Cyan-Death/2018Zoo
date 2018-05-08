@@ -15,7 +15,7 @@ class LocationAdmin(admin.ModelAdmin):
 admin.site.register(Location, LocationAdmin)
 
 class CharactersAdmin(admin.ModelAdmin):
-    list_display = ('id' , 'name' , 'story' , 'imageFileName' , 'dialougueOne' , 'answerOne' ,'dialougueTwo' , 'dialougueThree')
+    list_display = ('id' , 'name' , 'story' , 'imageFileName' , 'dialougueOne' , 'answerOne' , 'dialougueTwo' , 'answerTwo' , 'dialougueThree' , 'answerThree')
 	# location , get_absolute_url
 
 admin.site.register(Characters, CharactersAdmin)

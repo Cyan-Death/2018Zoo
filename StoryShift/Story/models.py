@@ -31,7 +31,9 @@ class Characters(models.Model):
     dialougueOne = models.CharField(max_length=500, help_text="Enter Dialougue", null=True)
     answerOne = models.CharField(max_length=500, help_text="Enter Answer", null=True)
     dialougueTwo = models.CharField(max_length=500, help_text="Enter Dialougue", null=True)
+    answerTwo = models.CharField(max_length=500, help_text="Enter Answer", null=True)
     dialougueThree = models.CharField(max_length=500, help_text="Enter Dialougue", null=True)
+    answerThree = models.CharField(max_length=500, help_text="Enter Answer", null=True)
 
 class LocationNeighbors(models.Model):
     fromLocation = models.ForeignKey('Location' , on_delete=models.SET_NULL , null=True , related_name='fromLocation')
