@@ -23,4 +23,13 @@ function answerTwo(clickedon) {
 	classToggle.className = classToggle.className.replace(/\bhidden\b/g,"");
 }
 
+function dialougueThree(clickedon) {
+	var classToggle = document.getElementById(clickedon);
+	classToggle.className = classToggle.className.replace(/\bhidden\b/g,"");
+}
+
+function answerThree(clickedon) {
+	var classToggle = document.getElementById(clickedon);
+	classToggle.className = classToggle.className.replace(/\bhidden\b/g,"");
+}
 

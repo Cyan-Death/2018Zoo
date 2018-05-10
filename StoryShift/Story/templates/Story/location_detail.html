@@ -5,7 +5,7 @@
 <h1>Location Detail for {{ location.id }} - {{ location.name }} in {{ location.zoo.name }}</h1>
 
 {% for locations in location.fromLocation.all %}
-    <p> {{locations.direction}} to {{locations.toLocation.name}} </p>
+    <a href="http://127.0.0.1:8000/Story/location/{{locations.toLocation.id}}"><p> {{locations.direction}} to {{locations.toLocation.name}} </p></a>
 {% endfor %}
 
 <h1>Characters</h1>
@@ -20,8 +20,10 @@
   <br>
   <h4 id="{{characters.id}}"class="optionClicked" onclick="answer('return{{characters.id}}') , dialougueTwo('questionTwo{{characters.id}}')">{{characters.dialougueOne}}</h4>
   <h5 id="return{{characters.id}}" class="hidden">{{characters.answerOne}}</h5>
-  <h4 id="questionTwo{{characters.id}}" class="hidden optionClicked" onclick="answerTwo('answerTwo{{characters.id}}')">{{characters.dialougueTwo}}</h4>
+  <h4 id="questionTwo{{characters.id}}" class="hidden optionClicked" onclick="answerTwo('answerTwo{{characters.id}}') , dialougueThree('questionThree{{characters.id}}')">{{characters.dialougueTwo}}</h4>
   <h5 id="answerTwo{{characters.id}}" class="hidden">{{characters.answerTwo}}</h5>
+  <h4 id="questionThree{{characters.id}}" class="hidden optionClicked" onclick="answerThree('answerThree{{characters.id}}')">{{characters.dialougueThree}}</h4>
+  <h5 id="answerThree{{characters.id}}" class="hidden">{{characters.answerThree}}</h5>
 <div id="caption"></div>
 </div>
 
